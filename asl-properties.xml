@@ -26,7 +26,7 @@
     <property name="slave.root" location="${ci.root}" />
     <property name="tool.root" location="${slave.root}/tool" />
 
-    <property name="ci.build.root" location="${slave.root}/build" />
+    <property name="ci.build.root" location="${env.ASL_BUILD}" />
     <property name="ci.tasks.root" location="${ci.build.root}/tasks" />
 
     <!-- please set ant/jdk/groovy/gradle/maven environment variables. -->
@@ -39,7 +39,7 @@
     <property name="groovy.lib.root" location="${groovy.root}/lib" />
     <property name="groovy.jar" location="${groovy.lib.root}/groovy-2.4.0-rc-2.jar" />
 
-    <property name="ci.asl.root" location="${ci.build.root}/asl" />
+    <property name="ci.asl.root" location="${env.ASL_ROOT}" />
 
     <property name="saxon.root" location="${ci.asl.root}/libs/saxon" />
     <property name="ci.saxon.jar" location="${ci.asl.root}/libs/makexsl/saxon8.jar" />
