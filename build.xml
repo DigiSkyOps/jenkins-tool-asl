@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sample" basedir=".." default="sample">
+    <property environment="env"/>
+    <property name="asl.dir" location="${env.ASL_ROOT}" />
+    <!-- load asl-config.xml -->
+    <import file="${asl.dir}/asl-config.xml" />
+
+    <property name="logs.dir" location="${ws.dir}/Logs" />
+    <property name="source.dir" location="${ws.dir}/Source" />
+    <property name="bin.dir" location="${ws.dir}/Bin" />
+    <property name="conf.dir" location="${ws.dir}/CIConf" />
+    <property name="dot.asl.dir" location="${ws.dir}/.asl" />
+
+    <target name="clean">
+        <delete dir="${ws.dir}/.asl" failonerror="false" />
+        <delete dir="${logs.dir}" failonerror="false" />
+        <delete dir="${reports}" failonerror="false" />
+        <delete dir="${artifacts.dir}" failonerror="false" />
+    </target>
+
+    <target name="setup.config" depends="asl.config" />
+
+    <target name="sample" depends="setup.config">
+
+        <ci task="fileversion">
+            <properties>
+                <property name="rc.resource.file" value="${source.dir}/sample/sample.rc" />
+            </properties>
+        </ci>
+
+    </target>
+
+</project>

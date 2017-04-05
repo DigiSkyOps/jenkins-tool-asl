@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="asl-config">
+    <description>
+        This is the entry config file that user should import.
+    </description>
+
+    <dirname property="asl.basedir" file="${ant.file.asl-config}" />
+    <import file="${asl.basedir}/asl-taskdefs.xml" />
+    <import file="${asl.basedir}/asl-tasks-settings.xml" />
+
+    <target name="asl.update.xsl.config" depends="asl.taskdefs">
+        <java jar="${ci.saxon.jar}"
+              fork="true"
+              output="${asl.basedir}/config.xsl"
+              errorproperty="ci.error.xslt.config">
+            <arg file="${asl.basedir}/asl-tasks-settings.xml" />
+            <arg file="${asl.basedir}/asl-update-xsl-config.xsl" />
+        </java>
+    </target>
+
+    <target name="asl.doPreTask" depends="asl.taskdefs">
+        <if>
+            <available file="${ant.root}/lib" type="dir"/>
+            <then>
+                <copy file="${ci.asl.root}/libs/commons-net-3.3.jar" tofile="${ant.root}/lib/commons-net-3.3.jar" />
+            </then>
+            <else>
+                <fail message="ant install fail, please check ant install steps." />
+            </else>
+        </if>
+    </target>
+
+    <target name="asl.config" depends="asl.update.xsl.config,asl.doPreTask" />
+</project>
