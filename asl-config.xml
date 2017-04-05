@@ -23,6 +23,7 @@
             <available file="${ant.root}/lib" type="dir"/>
             <then>
                 <copy file="${ci.asl.root}/libs/commons-net-3.3.jar" tofile="${ant.root}/lib/commons-net-3.3.jar" />
+                <copy file="${ci.asl.root}/libs/jsch-0.1.53.jar" tofile="${ant.root}/lib/jsch-0.1.53.jar" />
             </then>
             <else>
                 <fail message="ant install fail, please check ant install steps." />
