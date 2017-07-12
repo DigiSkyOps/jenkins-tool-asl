@@ -26,18 +26,20 @@
     <property name="slave.root" location="${ci.root}" />
     <property name="tool.root" location="${slave.root}/tool" />
 
-    <property name="ci.build.root" location="${env.ASL_BUILD}" />
-    <property name="ci.tasks.root" location="${ci.build.root}/tasks" />
+    <property name="ci.tasks.root" location="${env.ASL_TASKS_ROOT}" />
 
     <!-- please set ant/jdk/groovy/gradle/maven environment variables. -->
     <property name="jdk.root" location="${env.JAVA_HOME}" />
+    <property name="ant.root" location="${env.ANT_HOME}" />
+
+    <property name="groovy.root" location="${env.GROOVY_HOME}" />
+    <property name="groovy.version" location="${env.GROOVY_VERSION}" />
+    <property name="groovy.lib.root" location="${groovy.root}/lib" />
+    <property name="groovy.jar" location="${groovy.lib.root}/groovy-${groovy.version}.jar" />
+
     <property name="mvn.root" location="${env.MAVEN_HOME}" />
     <property name="gradle.root" location="${env.GRADLE_HOME}" />
 
-    <property name="ant.root" location="${env.ANT_HOME}" />
-    <property name="groovy.root" location="${env.GROOVY_HOME}" />
-    <property name="groovy.lib.root" location="${groovy.root}/lib" />
-    <property name="groovy.jar" location="${groovy.lib.root}/groovy-2.4.0-rc-2.jar" />
 
     <property name="ci.asl.root" location="${env.ASL_ROOT}" />
 
