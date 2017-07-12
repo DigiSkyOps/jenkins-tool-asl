@@ -49,7 +49,7 @@
 
     <!-- all task default properties -->
     <property name="ws.dir" location="${basedir}" />
-    <property name="reports" value="Reports" />
+    <property name="reports" value=".reports" />
     <property name="common-config.basedir" location="${asl.basedir}" />
 
     <target name="asl.properties.unix" if="os.unix">
