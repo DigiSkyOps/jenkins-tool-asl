@@ -43,7 +43,7 @@
         </sequential>
     </macrodef>
 
-    <macrodef name="get-git-commit-id">
+    <macrodef name="getGitCommitId">
         <attribute name="repoDir" />
         <attribute name="commitId" default="git.commit.id"/>
         <attribute name="shortCommitId" default="git.short.commit.id"/>
@@ -60,7 +60,7 @@
         </sequential>
     </macrodef>
 
-    <macrodef name="get-git-branch">
+    <macrodef name="getGitBranch">
         <attribute name="repoDir" />
         <attribute name="branchName" default="git.branch.name"/>
         <sequential>
@@ -91,7 +91,7 @@
      linux install subversion http://pkgs.repoforge.org/subversion/
      -->
     <!--获取SVN info命令的信息 -->
-    <macrodef name="get-svn-info">
+    <macrodef name="getSvnInfo">
         <attribute name="targetFile" />
         <attribute name="svnRevisionProperty" default="svn.revision" />
         <attribute name="svnUrlProperty" default="svn.url" />
@@ -146,7 +146,7 @@
     </macrodef>
 
     <!-- 导入文件或者目录到SVN里面 -->
-    <macrodef name="svn-import">
+    <macrodef name="svnImport">
         <attribute name="workingDir" default="${ws.dir}"/>
         <attribute name="targetFile" />
         <attribute name="targetSvnUrl" />
@@ -171,7 +171,7 @@
     </macrodef>
 
     <!-- 创建分支或者Tag -->
-    <macrodef name="svn-copy">
+    <macrodef name="svnCopy">
         <attribute name="svnCommitLog" />
         <attribute name="svnOriginUrl" />
         <attribute name="svnTargetUrl" />
@@ -189,7 +189,7 @@
     </macrodef>
 
     <!-- 修改分支或者Tag名称 -->
-    <macrodef name="svn-move">
+    <macrodef name="svnMove">
         <attribute name="svnCommitLog" />
         <attribute name="svnOriginUrl" />
         <attribute name="svnTargetUrl" />
@@ -206,7 +206,7 @@
         </sequential>
     </macrodef>
 
-    <macrodef name="svn-delete">
+    <macrodef name="svnDelete">
         <attribute name="svnCommitLog" />
         <attribute name="svnTargetUrl" />
         <attribute name="failonerror" default="true" />
@@ -221,7 +221,7 @@
         </sequential>
     </macrodef>
 
-    <macrodef name="get-filename-info">
+    <macrodef name="getFilenameInfo">
         <attribute name="targetFile" />
         <attribute name="fileNameProperty" default="target.file.name" />
         <attribute name="fileExtProperty" default="target.file.ext" />
