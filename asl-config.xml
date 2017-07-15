@@ -31,5 +31,5 @@
         </if>
     </target>
 
-    <target name="asl.config" depends="asl.update.xsl.config,asl.doPreTask" />
+    <target name="setup.asl" depends="asl.update.xsl.config,asl.doPreTask" />
 </project>

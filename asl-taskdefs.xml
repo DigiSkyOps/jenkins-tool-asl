@@ -72,6 +72,21 @@
         </sequential>
     </macrodef>
 
+    <macrodef name="getVersionFromFile">
+      <attribute name="versionFile" default="VERSION"/>
+      <attribute name="versionProperty" default="VERSION" />
+      <sequential>
+        <groovy>
+          <arg value="@{versionFile}" />
+          <arg value="@{versionProperty}" />
+          def versionFile = args[0]
+          def versionProperty = args[1]
+          def version = new File(versionFile).text.trim()
+          properties[versionProperty] = version
+        </groovy>
+      </sequential>
+    </macrodef>
+
     <!--
      linux install subversion http://pkgs.repoforge.org/subversion/
      -->
@@ -234,7 +249,6 @@
      <macrodef name="over">
         <attribute name="message" default="" />
         <sequential>
-
             <echo message="@{message}" />
             <script language="javascript">
                 self.log("Run Over!")
