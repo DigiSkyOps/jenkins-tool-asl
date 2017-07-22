@@ -24,7 +24,7 @@
 
     <!-- doc: http://www.oopsconsultancy.com/software/xmltask/ -->
     <taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask">
-        <classpath path="${ci.asl.root}/libs/xmltask.jar" />
+        <classpath path="${ci.asl.lib.root}/xmltask.jar" />
     </taskdef>
 
     <!-- groovy taskdef
