@@ -251,8 +251,9 @@
       <attribute name="name" />
       <element name="tasks" />
       <sequential>
-        <echo message="--// stage: @{name}" />
+        <echo message="--//------------start @@stage@@: @{name}--------------------------" />
         <tasks />
+        <echo message="--//--------------end @@stage@@: @{name}---------------------------" />
       </sequential>
     </macrodef>
 

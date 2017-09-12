@@ -8,7 +8,7 @@
   <property name="dot.asl.dir" location="${ws.dir}/.asl" />
   <property name="dot.ci.dir" location="${ws.dir}/.ci" />
 
-  <target name="--clean">
+  <target name="clean">
     <delete dir="${dot.asl.dir}" failonerror="false" />
     <delete dir="${dot.ci.dir}" failonerror="false" />
     <delete dir="${reports}" failonerror="false" />
@@ -18,26 +18,29 @@
   <target name="sample" depends="setup.asl">
 
     <stage name="BuildStage">
-      <ci task="customtask">
-        <properties>
-          <property name="type" value="cmdline" />
-          <property name="command" value="echo 'hello, abs-plugin'" />
-        </properties>
-      </ci>
+      <tasks>
+        <ci task="customtask">
+          <properties>
+            <property name="type" value="cmdline" />
+            <property name="command" value="echo 'hello, abs-plugin'" />
+          </properties>
+        </ci>
 
-      <ci task="semver">
-        <properties>
-          <property name="version.file" value="VERSION" />
-        </properties>
-      </ci>
+        <ci task="semver">
+          <properties>
+            <property name="version.file" value="VERSION" />
+          </properties>
+        </ci>
+      </tasks>
     </stage>
+
+    <echo message="--///${ws.dir}" />
 
     <ci task="opspkg">
       <properties>
         <property name="artifact.id" value="_asl" />
         <property name="fileset.dir" value="${ws.dir}" />
-        <property name="fileset.includes" value="**/*.*" />
-        <property name="fileset.includes" value="tasks" />
+        <property name="fileset.includes" value="tools/**,lib/**,scripts/**,README*,VERSION" />
       </properties>
     </ci>
 
