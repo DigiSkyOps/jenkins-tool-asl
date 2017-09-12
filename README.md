@@ -1,5 +1,14 @@
-# envlist
+# 使用方法
 
-1. ANT_HOME
-1. ASL_ROOT
-1. ASL_TASKS_ROOT
+```bash
+mkdir -p tasks
+cd tasks
+git clone https://github.com/JenkinsTasks/${tasks}.git
+
+cd -
+
+source asl.conf
+
+ant -f sample.xml -p
+
+```
