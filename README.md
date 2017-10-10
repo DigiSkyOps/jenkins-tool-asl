@@ -7,8 +7,6 @@ git clone https://github.com/JenkinsTasks/${tasks}.git
 
 cd -
 
-source asl.conf
-
-ant -f sample.xml -p
+ant -f sample.xml -p -Dasl.root=. -Dasl.tasks.root=tasks
 
 ```
