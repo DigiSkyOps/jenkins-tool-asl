@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="sample" basedir="." default="sample">
   <property environment="env"/>
-  <property name="asl.dir" location="${env.ASL_ROOT}" />
-  <!-- load asl-config.xml -->
-  <import file="${asl.dir}/scripts/asl-config.xml" />
+
+  <!-- load asl-config.xml 
+  ant -f sample.xml -Dasl.root=. -Dasl.tasks.root=tasks
+  -->
+  <import file="${asl.root}/scripts/asl-config.xml" />
 
   <property name="dot.asl.dir" location="${ws.dir}/.asl" />
   <property name="dot.ci.dir" location="${ws.dir}/.ci" />

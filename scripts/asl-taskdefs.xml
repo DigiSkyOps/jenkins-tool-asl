@@ -241,7 +241,7 @@
         <attribute name="task" />
         <element name="properties" optional="true" />
         <sequential>
-            <ant antfile="${ci.asl.tasks.root}/@{task}/run.xml" inheritRefs="true">
+            <ant antfile="${asl.tasks.root}/@{task}/run.xml" inheritRefs="true">
                 <properties />
             </ant>
         </sequential>
