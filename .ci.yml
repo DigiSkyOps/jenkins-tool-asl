@@ -6,7 +6,7 @@ name: asl
 
 # pipeline -> stage -> tasks
 vars:
-  group.id: xyz.opstack.jenkins
+  group.id: jkasl
   artifact.id: ${meta.name}
 
 stages:
@@ -22,7 +22,7 @@ stages:
     tasks:
       - task.id: ftpartifact
         scm.type: git
-        artifact.lane: jenkins
+        artifact.lane: ''
         fileset.dir: ${ws.dir}
         fileset.includes: ${meta.name}-*.tar.gz
 
