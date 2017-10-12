@@ -41,8 +41,6 @@
     <property name="saxon.root" location="${ci.asl.lib.root}/saxon" />
     <property name="ci.saxon.jar" location="${ci.asl.lib.root}/makexsl/saxon8.jar" />
 
-    <property name="ci.asl.tasks.root" location="${env.ASL_TASKS_ROOT}" />
-
     <!-- all task default properties -->
     <property name="ws.dir" location="${basedir}" />
     <property name="reports" value=".reports" />
