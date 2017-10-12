@@ -6,7 +6,7 @@ name: asl
 
 # pipeline -> stage -> tasks
 vars:
-  group.id: jkasl
+  group.id: xyz.opstack.jenkins.tasks
   artifact.id: ${meta.name}
 
 stages:
