@@ -33,7 +33,7 @@
     <property name="tool.root" location="${slave.root}/tool" />
 
     <!-- please set ant/jdk/groovy/gradle/maven environment variables. -->
-    <property name="ant.root" location="${env.ANT_HOME}" />
+    <property name="ant.root" location="${asl.root}/tool/ant" />
     <property name="ant.lib.root" location="${ant.root}/lib" />
     <property name="ant-contrib.jar" location="${ant.lib.root}/ant-contrib-${ant-contrib.version}.jar" />
     <property name="groovy.jar" location="${ant.lib.root}/groovy-all-${groovy.version}.jar" />
