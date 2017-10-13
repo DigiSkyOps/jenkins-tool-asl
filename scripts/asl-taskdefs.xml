@@ -11,7 +11,7 @@
       -->
     <taskdef resource="net/sf/antcontrib/antlib.xml">
         <classpath>
-            <pathelement location="${ant-contrib.jar}" />
+          <fileset dir="${ant.lib.root}" includes="**/*.jar" />
         </classpath>
     </taskdef>
 
@@ -31,7 +31,7 @@
     -->
     <taskdef name="groovy" classname="org.codehaus.groovy.ant.Groovy">
         <classpath>
-            <pathelement location="${groovy.jar}" />
+          <fileset dir="${ant.lib.root}" includes="**/*.jar" />
         </classpath>
     </taskdef>
 
